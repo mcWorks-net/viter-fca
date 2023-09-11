@@ -22,7 +22,7 @@ const Header = () => {
               className="hidden lg:flex"
               ulStyle={"hidden lg:flex gap-4"}
             />
-            <ToggleBtn handleClick={handleClick} />
+            <ToggleBtn navOpen={navOpen} handleClick={handleClick} />
           </div>
           <Navigation />
         </div>
