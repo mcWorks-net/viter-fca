@@ -10,6 +10,7 @@ import ToggleBtn from "./ToggleBtn";
 const Header = () => {
   const [navOpen, setNavOpen] = React.useState(true);
   const handleClick = () => setNavOpen(!navOpen);
+
   return (
     <>
       <header className="">
@@ -24,7 +25,7 @@ const Header = () => {
             />
             <ToggleBtn navOpen={navOpen} handleClick={handleClick} />
           </div>
-          <Navigation />
+          <Navigation navOpen={navOpen} />
         </div>
       </header>
     </>

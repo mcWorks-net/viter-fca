@@ -15,6 +15,9 @@
 }
 
 @layer components {
+  nav.active {
+    @apply right-0 transition-all ease-in-out duration-500;
+  }
 }
 
 @layer utilities {

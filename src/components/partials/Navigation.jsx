@@ -3,12 +3,14 @@ import Btn from "./Btn";
 import HeaderDetails from "./HeaderDetails";
 import Header from "./Header";
 
-const Navigation = () => {
-  const [navOpen, setNavOpen] = React.useState(false);
-
+const Navigation = ({ navOpen }) => {
   return (
     <>
-      <nav className="absolute left-0 lg:static bg-white w-full ">
+      <nav
+        className={`absolute -right-[100%] lg:static bg-white w-full transition-all ease-in duration-500 ${
+          navOpen ? "active" : ""
+        }`}
+      >
         <ul className="lg:flex justify-between text-center [&>li]:w-full [&>li>a]:block [&>li>a]:uppercase lg:[&>li>a]:p-2 [&>li]:my-6 lg:[&>*:last-child>a]:border-r-0 lg:[&>li>a]:border-r-2 [&>li>a]:border-r-[#d1d5db]">
           <li>
             <a href="https://fca.edu.ph/">home</a>
